@@ -23,7 +23,7 @@ namespace ACM.BL
 
 		public Order Retrieve(int orderId)
 		{
-			// code that retrieves the defined customer
+			// code that retrieves the defined order
 			return new Order();
 		}
 
@@ -33,7 +33,7 @@ namespace ACM.BL
 		/// <returns></returns>
 		public bool Save()
 		{
-			// code that saves the defined customer
+			// code that saves the defined order
 			return true;
 		}
 
