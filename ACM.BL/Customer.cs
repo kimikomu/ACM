@@ -7,7 +7,18 @@ using System.Threading.Tasks;
 namespace ACM.BL	// Acme Content Manager Buisiness Layer
 {
     public class Customer
-    {	
+    {
+		// default constructor -  VS will create automatically behind the sceens. Only make one if you need to add code to it or you need to create additional constructors. 
+		public Customer()
+	    {
+		    
+	    }
+
+	    public Customer(int customerId)	// since CustomerId setter is private, it cannot be access outside the class. Passed in here as a parameter to provide a way to set that property
+	    {
+		    this.CustomerId = customerId;
+	    }
+		
 		//static property
 	    public static int InstanceCount { get; set; }
 
