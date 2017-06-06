@@ -32,9 +32,7 @@ namespace ACM.BL	// Acme Content Manager Buisiness Layer
 
 		// auto-implementing properties have backing fields built into them
 		public string FirstName { get; set; }
-
 	    public string EmailAddress { get; set; }
-
 	    public int CustomerId { get; private set; }
 
 	    // does not need a backing field bc it does not require storage of any data. No way to set anything, making it readonly
