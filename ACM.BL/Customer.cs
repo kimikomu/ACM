@@ -40,9 +40,48 @@ namespace ACM.BL	// Acme Content Manager Buisiness Layer
 				    }
 				    fullName += FirstName;
 			    }
-
 				return fullName;
 		    }	
 	    }
+
+		/// <summary>
+		/// Retrieve one customer.
+		/// </summary>
+	    public Customer Retrieve(int customerId)
+	    {
+		    // code that retrieves the defined customer
+			return new Customer();
+	    }
+
+	    /// <summary>
+	    /// Retrieve
+	    /// </summary>
+	    public List<Customer> Retrieve()
+	    {
+		    // code that retrieves the defined customer
+		    return new List<Customer>();
+	    }
+
+		/// <summary>
+		/// Saves the current customer.
+		/// </summary>
+		/// <returns></returns>
+		public bool Save()
+	    {
+			// code that saves the defined customer
+			return true;
+	    }
+		
+		// method to validate property values
+	    public bool Validate()
+	    {
+		    var isValid = true;
+
+		    if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+		    if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+		    return isValid;
+	    }
+		
 	}
 }
