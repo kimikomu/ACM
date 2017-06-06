@@ -18,7 +18,7 @@ namespace ACM.BL
 			this.ProductId = productId;
 		}
 
-		public  Decimal? CurrentPrice { get; set; }	// nullable type is a value type (int, decimal) allows definition of a value OR a NULL. Use when the code needs to distinguish between "not set" and 0;
+		public  Decimal? CurrentPrice { get; set; }	// nullable type is a value type (int, decimal) allows definition of a value OR a null. Use when the code needs to distinguish between "not set" and 0;
 		public int ProductId { get; private set; }
 		public string ProductDescription { get; set; }
 		public string ProductName { get; set; }
