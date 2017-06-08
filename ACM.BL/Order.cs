@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-	class Order
+	public class Order
 	{
 		public Order()
 		{
@@ -20,22 +20,6 @@ namespace ACM.BL
 
 		public DateTimeOffset? OrderDate { get; set; }  // can hold value of DateTimeOffset OR null	// DateTimeOffset holds date, time, and time zone offset
 		public int OrderId { get; private set; }
-
-		public Order Retrieve(int orderId)
-		{
-			// code that retrieves the defined order
-			return new Order();
-		}
-
-		/// <summary>
-		/// Saves the current customer.
-		/// </summary>
-		/// <returns></returns>
-		public bool Save()
-		{
-			// code that saves the defined order
-			return true;
-		}
 
 		// method to validate property values
 		public bool Validate()
