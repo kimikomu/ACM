@@ -61,25 +61,6 @@ namespace ACM.BL	// Acme Content Manager Buisiness Layer
 		    // code that retrieves the defined customer
 			return new Customer();
 	    }
-
-	    /// <summary>
-	    /// Retrieve
-	    /// </summary>
-	    public List<Customer> Retrieve()
-	    {
-		    // code that retrieves the defined customer
-		    return new List<Customer>();
-	    }
-
-		/// <summary>
-		/// Saves the current customer.
-		/// </summary>
-		/// <returns></returns>
-		public bool Save()
-	    {
-			// code that saves the defined customer
-			return true;
-	    }
 		
 		// method to validate property values
 	    public bool Validate()
