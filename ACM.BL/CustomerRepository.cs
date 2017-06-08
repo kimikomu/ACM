@@ -13,8 +13,19 @@ namespace ACM.BL
 		/// </summary>
 		public Customer Retrieve(int customerId)
 		{
+			// create the instance of the customer class
+			Customer customer = new Customer(customerId);		// customerId can be set at instantiation of the object only
+
 			// code that retrieves the defined customer
-			return new Customer();
+			
+			// temporary hard coded values to return a populated customer
+			if (customerId == 1)
+			{
+				customer.EmailAddress = "fbaggins@hobbiton.me";
+				customer.FirstName = "Frodo";
+				customer.LastName = "Baggins";
+			}
+			return customer;
 		}
 
 		/// <summary>
