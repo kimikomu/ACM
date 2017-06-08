@@ -52,15 +52,6 @@ namespace ACM.BL	// Acme Content Manager Buisiness Layer
 				return fullName;
 		    }	
 	    }
-
-		/// <summary>
-		/// Retrieve one customer.
-		/// </summary>
-	    public Customer Retrieve(int customerId)
-	    {
-		    // code that retrieves the defined customer
-			return new Customer();
-	    }
 		
 		// method to validate property values
 	    public bool Validate()

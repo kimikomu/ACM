@@ -9,6 +9,15 @@ namespace ACM.BL
 	public class CustomerRepository
 	{
 		/// <summary>
+		/// Retrieve one customer.
+		/// </summary>
+		public Customer Retrieve(int customerId)
+		{
+			// code that retrieves the defined customer
+			return new Customer();
+		}
+
+		/// <summary>
 		/// Retrieve
 		/// </summary>
 		public List<Customer> Retrieve()
