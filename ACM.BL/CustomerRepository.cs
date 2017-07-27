@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM.BL
 {
 	public class CustomerRepository
 	{
+		private AddressRepository addressRepository { get; set; }
+
+		public CustomerRepository()
+		{
+			addressRepository = new AddressRepository();
+		}
+			
 		/// <summary>
-		/// Retrieve one customer.
+		/// Retrieve one customer.`
 		/// </summary>
 		public Customer Retrieve(int customerId)
 		{
 			// create the instance of the customer class
 			Customer customer = new Customer(customerId);		// customerId can be set at instantiation of the object only
+			customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
 
 			// code that retrieves the defined customer
 			

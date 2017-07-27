@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM.BL
 {
@@ -18,8 +15,12 @@ namespace ACM.BL
 			this.OrderId = orderId;
 		}
 
-		public DateTimeOffset? OrderDate { get; set; }  // can hold value of DateTimeOffset OR null	// DateTimeOffset holds date, time, and time zone offset
+		public int CustomerId { get; set; }
+		public int ShippingAddressId { get; set; }
+
+		public DateTimeOffset? OrderDate { get; set; }  // DateTimeOffset holds date, time, and time zone offset
 		public int OrderId { get; private set; }
+		public List<OrderItem> orderItems { get; set; }
 
 		// method to validate property values
 		public bool Validate()
