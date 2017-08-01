@@ -15,7 +15,7 @@ namespace Acme.CommonTest
 
 
 			//-- Act
-			var actual = StringHandler.InsertSpaces(source);
+			var actual = source.InsertSpaces();
 
 			//-- Assert
 			Assert.AreEqual(actual, expected);
@@ -30,7 +30,7 @@ namespace Acme.CommonTest
 
 
 			//-- Act
-			var actual = StringHandler.InsertSpaces(source);
+			var actual = source.InsertSpaces();
 
 			//-- Assert
 			Assert.AreEqual(actual, expected);
