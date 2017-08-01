@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Acme.Common;
 
 namespace ACM.BL
 {
-	public class Product
+	public class Product : EntityBase
 	{
 		public Product()
 		{
@@ -21,10 +18,21 @@ namespace ACM.BL
 		public Decimal? CurrentPrice { get; set; }	// nullable type is a value type (int, decimal) allows definition of a value OR a null. Use when the code needs to distinguish between "not set" and 0;
 		public int ProductId { get; private set; }
 		public string ProductDescription { get; set; }
-		public string ProductName { get; set; }
+
+		private String _ProductName;
+
+		public String ProductName
+		{
+			get
+			{
+				return StringHandler.InsertSpaces(_ProductName);
+			}
+			set { _ProductName = value; }
+		}
+
 
 		// method to validate property values
-		public bool Validate()
+		public override bool Validate()
 		{
 			var isValid = true;
 
@@ -33,5 +41,12 @@ namespace ACM.BL
 
 			return isValid;
 		}
+
+		public override string ToString()
+		{
+			return ProductName;
+		}
+
+
 	}
 }
