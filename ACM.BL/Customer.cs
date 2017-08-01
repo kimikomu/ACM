@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Acme.Common;
 
 namespace ACM.BL    // Acme Content Manager Buisiness Layer
 {
-	public class Customer
+	public class Customer : EntityBase, ILoggable
 	{
 		// default constructor -  VS will create automatically behind the sceens. Only make one if you need to add code to it or you need to create additional constructors. 
 		public Customer() : this(0)	// calls the paramaterized constructer to initalize the the AddressList in order to avoid null exception
@@ -53,7 +54,7 @@ namespace ACM.BL    // Acme Content Manager Buisiness Layer
 		}
 		
 		// method to validate property values
-		public bool Validate()
+		public override bool Validate()
 		{
 			var isValid = true;
 
@@ -66,6 +67,13 @@ namespace ACM.BL    // Acme Content Manager Buisiness Layer
 		public override string ToString()
 		{
 			return FullName;
+		}
+
+		public string Log()
+		{
+			var logString = this.CustomerId + ": " + this.FullName + ": " + "Email: " + this.EmailAddress.ToString();
+
+			return logString;
 		}
 	}
 }

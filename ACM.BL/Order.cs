@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.Common;
 
 namespace ACM.BL
 {
-	public class Order
+	public class Order : EntityBase, ILoggable
 	{
 		public Order()
 		{
@@ -23,7 +24,7 @@ namespace ACM.BL
 		public List<OrderItem> orderItems { get; set; }
 
 		// method to validate property values
-		public bool Validate()
+		public override bool Validate()
 		{
 			var isValid = true;
 
@@ -35,6 +36,13 @@ namespace ACM.BL
 		public override string ToString()
 		{
 			return OrderDate.Value.Date + " ( " + OrderId + ")";
+		}
+
+		public string Log()
+		{
+			var logString = this.OrderId + ": " + "Date: " + this.OrderDate.ToString();
+
+			return logString;
 		}
 	}
 }
